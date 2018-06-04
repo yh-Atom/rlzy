@@ -1,54 +1,35 @@
-body{
-	background:url(../img/back.jpg)  no-repeat center center fixed ;
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
- 	 background-size: cover;
+html, body,div,p,img,span,a,label,input{
+	margin:0px;
+	padding:0px;
+	vertical-align: middle;
 }
-
-.contain{
-	width: 1000px;
+.bg{
+	width:100%;
 	height:800px;
+	position: relative;
+	background: url(../img/bg.jpg)  no-repeat center;
+	background-size: 100% 100%;
 }
-.left{
-	width: 500px;
-	height: 800px;
-	float: left;
+.login-input-area{
+	width: 400px;
 }
-.login-left{
-	opacity: 0;
-	width:400px;
-	height: 0px;
-	margin-top: 120px;
-}
-.right{
-	width: 500px;
-	height: 800px;
-	float: left;
-	}
 .login-right{
 	width:450px;
 	height: 250px;
 	margin-top: 200px;
 	opacity: 1;
 }
-.login-input-area{
-	width: 400px;
+.login-left{
+	opacity: 0;
+	width:400px;
+	height: 0px;
+	margin-top: 120px 120px 120px 120px;
 }
-.login-button{
-	height: 100px;
-	width: 300px;
-	position:relative;
-	left: 100px;
-	}
-.picture{
-
-	height: 250px;
-	width: 450px;
-	border-radius: 20px;
-	overflow:hidden;
-	
+.left{
+	width: 1423px;
+	height: 0px;
+	float: right;
 }
-	
-
-		
+.button_box div:hover{
+	cursor: pointer;
+}
