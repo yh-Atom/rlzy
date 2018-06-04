@@ -4,7 +4,7 @@ public class rlzy_user {
 	
 	private String rlzy_user_id;
 	private String user_name;
-	private String password;
+	private String user_password;
 	
 	public String getRlzy_user_id() {
 		return rlzy_user_id;
@@ -22,12 +22,12 @@ public class rlzy_user {
 		this.user_name = user_name;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getUser_password() {
+		return user_password;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+	public void setUser_password(String user_password) {
+		this.user_password = user_password;
+	}	
 	
 }

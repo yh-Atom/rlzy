@@ -29,7 +29,7 @@ public class UserDaoImpl implements UserDao{
 	@Override//判断用户是否存在
 	public boolean judgeUserbyUsername(String user_name) {
 		// TODO Auto-generated method stub
-		String hql="from rlzy where username='"+user_name+"'";
+		String hql="from rlzy where user_name='"+user_name+"'";
 		Query query=getSession().createQuery(hql);
 		List<rlzy_user> list=query.list();
 		if(list.size() > 0){
@@ -43,7 +43,7 @@ public class UserDaoImpl implements UserDao{
 	@Override//通过用户名的到用户
 	public rlzy_user getUserByusername(String user_name) {
 		// TODO Auto-generated method stub
-		String hql="from rlzy where username = '"+user_name+"'";
+		String hql="from rlzy where user_name = '"+user_name+"'";
 		Query query=getSession().createQuery(hql);
 		List<rlzy_user> list=query.list();
 		return list.get(0);

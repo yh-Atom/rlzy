@@ -55,25 +55,23 @@
 			人力资源管理</div>
 		<div id="navbar-menu">
 			<ul style="margin: 0 0 0 20px;" class="nav navbar-nav navbar-left">
-				<li class="dropdown" style="float: left;"><a
-					href="#"><span>首页</span> </a></li>
-				<li class="dropdown" style="float: left;"><a
-					href="#"> <span>人员档案</span>
+				<li class="dropdown" style="float: left;"><a href="#"><span>首页</span>
+				</a></li>
+
+				<li class="dropdown" style="float: left;"><a href="<%=basePath%>user/"> <span>人事管理</span></a>
+
+				<li class="dropdown" style="float: left;"><a href="<%=basePath%>manager/"> <span>人员档案</span>
+
 				</a></li>
 				<li class="dropdown" style="float: left;"><a
-					href="#"> <span>人事调配</span>
-				</a></li>
-				<li class="dropdown" style="float: left;"><a
-					href="#"> <span>教育培训</span>
-				</a></li>
-				<li class="dropdown" style="float: left;"><a
-					href="#"> <span>系统管理</span>
+					href="<%=basePath%>user/User_skipToUser"> <span>用户</span>
 				</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right" style="margin: 0 0px 0 0">
 				<!--  -->
-				
-				<!-- <li class="dropdown"><a href="#" class="dropdown-toggle"
+				<!--  -->
+				<!--  -->
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown"> <i class="fa fa-user-circle"></i> <span
 						id="USER_NAME"><%=request.getSession().getAttribute("user_name")%></span> <i
 						class="icon-submenu lnr lnr-chevron-down"></i>
@@ -87,13 +85,13 @@
 
 								class="lnr lnr-exit"></i> <span>退出登录</span>
 						</a></li>
-					</ul></li> -->
-				
+					</ul></li>
+				<!--  -->
 			</ul>
 		</div>
 		</nav>
 	<!-------------------------------------------------修改密码---------------------------------------------------------------  -->
-		<!-- <div class="modal fade" id="updatePassword" tabindex="-1"
+		<div class="modal fade" id="updatePassword" tabindex="-1"
 			role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -128,9 +126,7 @@
 				<!-- /.modal-content -->
 			</div>
 			<!-- /.modal-dialog -->
-		</div> -->
-		
-
+		</div>
 		<!-- -------------------------------------------------修改密码成功--------------------------------------------------------------- -->		
 	</div>
 </body>

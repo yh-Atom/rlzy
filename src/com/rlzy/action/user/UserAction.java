@@ -35,14 +35,17 @@ public class UserAction extends ActionSupport{
 	public void login() throws IOException{
 		HttpServletResponse response=ServletActionContext.getResponse();
 		response.setCharacterEncoding("text/html;charset=utf-8");
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		response.setHeader("Access-Control-Allow-Methods", "GET,POST");
 		PrintWriter pw=response.getWriter();
-		if(!userService.judgeUserByUsername(username)){
-			pw.write("");//不存在
+		if(!userService.judgeUserByUsername(user_username)){
+			pw.write("userNoExist");//不存在
 		}else{
-			if(password.equals(userService.getUserByUsername(username).getPassword())){
-				pw.write("");//密码正确
+			String userpassword=userService.getUserByUsername(user_username).getUser_password();
+			if(userpassword.equals(user_password)){
+				pw.write("loginSuccess");//密码正确
 			}else 
-				pw.write("");//密码错误
+				pw.write("passwordError");//密码错误
 		}
 		
 		pw.flush();
@@ -50,17 +53,10 @@ public class UserAction extends ActionSupport{
 	}
 	
 	
-	private String username;
+	private String user_username;
 	private String user_id;
-	private String password;
+	private String user_password;
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
 
 	public UserServiceImpl getUserService() {
 		return userService;
@@ -70,12 +66,12 @@ public class UserAction extends ActionSupport{
 		this.userService = userService;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getUser_username() {
+		return user_username;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUser_username(String user_username) {
+		this.user_username = user_username;
 	}
 
 	public String getUser_id() {
@@ -85,8 +81,12 @@ public class UserAction extends ActionSupport{
 	public void setUser_id(String user_id) {
 		this.user_id = user_id;
 	}
-	
-	
-	
 
+	public String getUser_password() {
+		return user_password;
+	}
+
+	public void setUser_password(String user_password) {
+		this.user_password = user_password;
+	}
 }
